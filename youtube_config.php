@@ -1,13 +1,4 @@
 <?php
-// youtube_config.php.sample
-// Αντιγράψτε αυτό το αρχείο ως youtube_config.php και συμπληρώστε τα στοιχεία σας
-
-// ΟΔΗΓΙΕΣ ΡΥΘΜΙΣΗΣ YOUTUBE API:
-// 1. Πηγαίνετε στο Google Cloud Console (https://console.cloud.google.com/)
-// 2. Δημιουργήστε ένα νέο project ή επιλέξτε ένα υπάρχον
-// 3. Ενεργοποιήστε το YouTube Data API v3
-// 4. Δημιουργήστε credentials (API Key και OAuth 2.0 Client)
-// 5. Συμπληρώστε τα παρακάτω στοιχεία
 
 // YouTube Data API Key (για δημόσιες αναζητήσεις)
 define('YOUTUBE_API_KEY', 'YOUR_YOUTUBE_API_KEY_HERE');
@@ -150,19 +141,4 @@ function isYouTubeAPIConfigured() {
            !empty(YOUTUBE_API_KEY);
 }
 
-// Παράδειγμα χρήσης:
-/*
-try {
-    if (isYouTubeAPIConfigured()) {
-        $results = searchYouTubeAPI('funny cats', 10);
-        foreach ($results as $video) {
-            echo $video['title'] . "\n";
-        }
-    } else {
-        echo "YouTube API is not configured. Please check youtube_config.php\n";
-    }
-} catch (Exception $e) {
-    echo "Error: " . $e->getMessage() . "\n";
-}
-*/
 ?>

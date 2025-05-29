@@ -73,6 +73,20 @@ try {
     )";
     $pdo->exec($sql_follows);
     echo "Πίνακας 'follows' δημιουργήθηκε επιτυχώς.\n<br>";
+
+    // Δημιουργία πίνακα videos
+$sql_videos = "
+CREATE TABLE IF NOT EXISTS videos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    video_id VARCHAR(50) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    added_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+)";
+$pdo->exec($sql_videos);
+echo "Πίνακας 'videos' δημιουργήθηκε επιτυχώς.\n<br>";
+
     
     echo "\n<br><strong>Η βάση δεδομένων δημιουργήθηκε επιτυχώς! Μπορείτε τώρα να χρησιμοποιήσετε την εφαρμογή.</strong>";
     

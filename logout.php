@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 // 1. Καθαρισμός όλων των session μεταβλητών
 $_SESSION = array();
 
-// 2. Διαγραφή του session cookie (αν χρησιμοποιούνται cookies για sessions)
+// 2. Διαγραφή του session cookie
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(session_name(), '', time() - 42000,

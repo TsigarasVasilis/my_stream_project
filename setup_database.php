@@ -43,7 +43,7 @@ try {
         creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
     )";
-    $pdo->exec($sql_playlists);
+    $pdo->exec($sql_playlists); 
     echo "Πίνακας 'playlists' δημιουργήθηκε επιτυχώς.\n<br>";
     
     // Δημιουργία πίνακα playlist_items
